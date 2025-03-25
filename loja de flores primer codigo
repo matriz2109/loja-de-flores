@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Flores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><img src="images/logo.png" alt="Logo" width="50"> Loja de Flores</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Bem-vindo à nossa loja de flores!</h2>
+        <p>Encontre as mais belas flores para todas as ocasiões.</p>
+        <img src="images/loja.jpg" alt="Loja de Flores" width="100%">
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Pagina Produtos -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Loja de Flores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><img src="images/logo.png" alt="Logo" width="50"> Nossos Produtos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Conheça nossa variedade de flores:</h2>
+        <ul>
+            <li><img src="images/rosa.jpg" alt="Rosas" width="150"> Rosas - R$ 20,00</li>
+            <li><img src="images/tulipa.jpg" alt="Tulipas" width="150"> Tulipas - R$ 25,00</li>
+            <li><img src="images/orquidea.jpg" alt="Orquídeas" width="150"> Orquídeas - R$ 30,00</li>
+            <li><img src="images/girassol.jpg" alt="Girassóis" width="150"> Girassóis - R$ 18,00</li>
+            <li><img src="images/lirio.jpg" alt="Lírios" width="150"> Lírios - R$ 22,00</li>
+            <li><img src="images/margarida.jpg" alt="Margaridas" width="150"> Margaridas - R$ 15,00</li>
+            <li><img src="images/crisantemo.jpg" alt="Crisântemos" width="150"> Crisântemos - R$ 19,00</li>
+            <li><img src="images/peonia.jpg" alt="Peônias" width="150"> Peônias - R$ 28,00</li>
+        </ul>
+    </main>
+</body>
+</html>
+
+<!-- Pagina Contato -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Loja de Flores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><img src="images/logo.png" alt="Logo" width="50"> Contato</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Entre em contato conosco!</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <h2>Nossa Localização</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093746!2d144.95373631531693!3d-37.81627917975154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f7d3b1%3A0x5045675218cee17!2sMelbourne%2C%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1633693048851!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </main>
+</body>
+</html>
