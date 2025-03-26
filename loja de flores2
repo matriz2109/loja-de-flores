@@ -1,0 +1,127 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Flores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Entrega el mismo día</h1>
+        <p>¿Necesitas un ramo para hoy mismo?</p>
+        <select id="filtro">
+            <option value="todos">Ordenar por...</option>
+            <option value="menor">Menor Precio</option>
+            <option value="mayor">Mayor Precio</option>
+        </select>
+    </header>
+
+    <main>
+        <div class="productos">
+            <div class="producto" data-precio="40">
+                <img src="images/margaritas.jpg" alt="Alegres Margaritas">
+                <h2>Alegres Margaritas</h2>
+                <p class="precio">40,00€</p>
+                <button class="comprar">Comprar ahora</button>
+            </div>
+            <div class="producto" data-precio="44">
+                <img src="images/anthurium.jpg" alt="Anthurium">
+                <h2>Anthurium</h2>
+                <p class="precio">44,00€</p>
+                <button class="comprar">Comprar ahora</button>
+            </div>
+            <div class="producto" data-precio="60">
+                <img src="images/centro-alegria.jpg" alt="Centro Alegría">
+                <h2>Centro Alegría</h2>
+                <p class="precio">60,00€</p>
+                <button class="comprar">Comprar ahora</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #f8f1e5;
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0;
+    color: #5c3d2e;
+}
+
+header select {
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    background: #fff;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.precio {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.comprar {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.comprar:hover {
+    background: #c9302c;
+}
+
+
+
+document.getElementById('filtro').addEventListener('change', function() {
+    let productos = document.querySelectorAll('.producto');
+    let orden = this.value;
+
+    let productosArray = Array.from(productos);
+    productosArray.sort((a, b) => {
+        let precioA = parseInt(a.getAttribute('data-precio'));
+        let precioB = parseInt(b.getAttribute('data-precio'));
+        
+        return orden === "menor" ? precioA - precioB : precioB - precioA;
+    });
+
+    let contenedor = document.querySelector('.productos');
+    contenedor.innerHTML = "";
+    productosArray.forEach(prod => contenedor.appendChild(prod));
+});
